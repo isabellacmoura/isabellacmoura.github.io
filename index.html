@@ -273,6 +273,15 @@
             transform: rotate(-12deg);
             z-index: 3;
         }
+
+        .desk-item:nth-child(9) {
+            width: 340px;
+            height: 240px;
+            top: 240px;
+            left: 300px;
+            transform: rotate(-9deg);
+            z-index: 30;
+        }
         
         /* Efeito hover específico para imag3-1 e imag3-2 */
         #imag3-1:hover {
@@ -283,6 +292,11 @@
         #imag3-2:hover {
             transform: scale(2.0);
             z-index: 15;
+        }
+
+        #imag9-1:hover {
+            transform: scale(2.0);
+            z-index: 35;
         }
         
         /* Efeito hover específico para imag1-1 */
@@ -600,6 +614,13 @@
         }
 
         @media (max-width: 768px) {
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: stretch;
+            }
+
             .collage-container {
                 width: 100%;
                 max-width: 400px;
@@ -619,7 +640,17 @@
             }
             
             body {
-                padding: 20px 15px;
+                padding: 16px 12px 28px;
+            }
+
+            .text-left {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 0;
+                padding: 12px;
+                max-width: 100%;
+                text-align: left;
             }
             
             .desk-container {
@@ -631,12 +662,14 @@
                 height: auto;
                 max-width: 100%;
                 margin: 20px 0;
+                display: flex;
+                flex-direction: column;
             }
             
             .desk-item {
                 position: relative;
                 width: 100%;
-                height: 200px;
+                height: 220px;
                 margin-bottom: 15px;
                 transform: none !important;
             }
@@ -648,29 +681,35 @@
             .desk-item:nth-child(5),
             .desk-item:nth-child(6),
             .desk-item:nth-child(7),
-            .desk-item:nth-child(8) {
+            .desk-item:nth-child(8),
+            .desk-item:nth-child(9) {
                 width: 100%;
-                height: 200px;
+                height: 220px;
                 top: auto;
                 left: auto;
                 transform: none;
+            }
+
+            #imag9-1 {
+                order: -1;
             }
             
             .text-right {
                 position: relative;
                 bottom: auto;
                 right: auto;
-                padding: 20px;
+                padding: 12px;
                 max-width: 100%;
+                text-align: left;
             }
             
             .lede-info {
                 position: relative;
                 bottom: auto;
                 left: auto;
-                padding: 20px;
+                padding: 12px;
                 max-width: 100%;
-                margin: 20px 0;
+                margin: 8px 0;
             }
             
             .social-links {
@@ -678,7 +717,22 @@
                 top: auto;
                 right: auto;
                 justify-content: center;
-                margin: 20px 0;
+                margin: 8px 0 16px;
+            }
+
+            .greeting {
+                font-size: 20px;
+            }
+
+            .bio-text,
+            .text-left p,
+            .text-right p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .skills-list {
+                font-size: 15px;
             }
         }
         
@@ -695,7 +749,7 @@
         
         <!-- Info Lede Program -->
         <div class="lede-info">
-            <p>Click and explore my projects developed at the <strong>Lede Program in Data Practices at Columbia Journalism School</strong></p>
+            <p>Click to explore my projects, including those developed through the <strong>Lede Data Practices Program at the Columbia School of Journalism</strong></p>
         </div>
         
         <!-- Social Links -->
@@ -742,6 +796,11 @@
             <div class="desk-item" id="imag3-2">
                 <a href="https://isabellacmoura.github.io/short-term-apartments-in-lisbon/" target="_blank">
                     <img src="imag2.jpg" alt="Project 2">
+                </a>
+            </div>
+            <div class="desk-item" id="imag9-1">
+                <a href="https://aginginnyc.vercel.app/" target="_blank">
+                    <img src="imag9.jpg" alt="Aging in NYC">
                 </a>
             </div>
         </div>
